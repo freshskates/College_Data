@@ -25,9 +25,9 @@ public:
 
 class Data {
 public:
-	map<string, Data> mapped_data;
+	map<string, HeaderData> mapped_data = {};
 
-	int definitions = 0;
+	int schools = 0;
 
 	Data() {};
 
@@ -37,6 +37,8 @@ public:
 
 	static vector<string> split(string& s, string&& delimiter, bool&& grab_word = false);
 
+	void print(HeaderData&);
+	void all();
 private:
 	string file;
 	
