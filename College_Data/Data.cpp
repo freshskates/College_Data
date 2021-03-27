@@ -64,6 +64,6 @@ void Data::print(HeaderData& val) {
 
 
 void Data::all() {
-	for (auto& [key, val] : mapped_data)
+	for (auto& [key, val] : this->mapped_data)
 		print(val);
 }
