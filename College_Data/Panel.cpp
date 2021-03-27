@@ -2,6 +2,19 @@
 using namespace std; 
 #include "Panel.h"
 
+
+void Panel::create_display() {
+	for (auto& [key, val] : temp.mapped_data)
+		display.emplace_back(val);
+}
+
+Panel::Panel(Data& storage) :temp(storage) {
+	create_display();
+	sort(display.begin(), display.end(), [](HeaderData& a, HeaderData& b) -> bool {return a.school_name < b.school_name; });
+	for (auto& x : display)
+		cout << x.school_name << endl; 
+}
+
 void Panel::help() {
 	cout << "Schools: " << temp.mapped_data.size() << "\nSchools: " << temp.schools - 1 << endl;
 	cout << "Menu" << endl;

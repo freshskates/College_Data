@@ -11,5 +11,5 @@ int main()
 	data.read();
 	data.all();
 	Panel panel(data); 
-	panel.start();
+	//panel.start();
 }

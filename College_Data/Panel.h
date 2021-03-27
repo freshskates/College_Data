@@ -7,15 +7,16 @@ class Panel {
 public:
 
 	Data& temp;
-
-	Panel(Data& storage) :temp(storage) {}
-
+	//Panel();
+	Panel(Data&);
 	vector<HeaderData> display;
 
 	vector<string> options = { "distinct", "reversed", "noun", "verb", "adverb", "adjective", "pronoun", "preposition", "conjunction", "interjection" };
 
 	void help();
 
+	void create_display();
+	
 	void start();
 
 	void option(string& check);
