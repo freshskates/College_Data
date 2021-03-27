@@ -38,13 +38,6 @@ vector<string> Data::split(string& s, string&& delimiter, bool&& grab_word) {
 	return list;
 }
 
-string Data::trim(string& s, bool&& flag)
-{
-	size_t pos = flag ? s.find_first_not_of(" ") : s.find_last_not_of(" ");
-	if (flag)
-	return pos == string::npos ? "" : s.substr(pos);
-	return pos == string::npos ? "" : s.substr(0, pos + 1);
-}
 
 void Data::map_words(string& line) {
 	vector<string> definition = split(line, ",");
