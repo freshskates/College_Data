@@ -1,5 +1,6 @@
 #include "Data.h"
 #include <iostream>
+
 void Data::read() {
 	string line;
 	ifstream fin;
@@ -36,7 +37,6 @@ vector<string> Data::split(string& s, string&& delimiter, bool&& grab_word) {
 	list.emplace_back(s);
 	return list;
 }
-	
 
 string Data::trim(string& s, bool&& flag)
 {
@@ -71,7 +71,6 @@ void Data::print(HeaderData& val) {
 
 
 void Data::all() {
-	for (auto& [key, val] : mapped_data) {
+	for (auto& [key, val] : mapped_data)
 		print(val);
-	}
 }

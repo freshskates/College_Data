@@ -145,9 +145,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Panel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
+    <ClInclude Include="Panel.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="salaries-by-college-type.csv" />
